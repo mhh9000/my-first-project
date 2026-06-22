@@ -4,10 +4,10 @@
 # 适用文本：企业公关稿、明星回应、政府/国际组织官方通报
 # 总分100，六大评分维度，输出分项得分+评级+优化建议
 
-import re
+导入re
 
-class PRStatementScorer:
-    def __init__(self, text: str, category: str = "enterprise"):
+classPRStatementScorer：
+     str, category: str = "企业"):
         """
         :param text: 待打分公关文稿全文
         :param category: 文稿分类 enterprise/celebrity/government
@@ -19,13 +19,13 @@ class PRStatementScorer:
         self.suggestions = []
 
     def score_ethos(self):
-        """维度1 Ethos 主体可信度 满分15"""
+        “维度1 伦理主体可信度 满分15”
         score = 0
         # 分行业可信度关键词库
         ethos_dict = {
-            "enterprise": ["CEO致歉", 全面整改", 配合监管", 第三方检测", 召回", 公开白皮书"],
-            "celebrity": ["深刻自省", 暂停商务", 公益反思", 全面整改话术审核"],
-            "government": ["行政命令", 监测数据", 独立调查组", 人道救援", WHO监测报告", IAEA评估"]
+            "企业": ["CEO致歉", 全面整改", 配合监管", 第三方检测", 召回", 公开白皮书"],
+            “名人”: [“深刻自省”，暂停商务”，公益反思”，全面整改话术审核"],
+            "政府": ["行政命令", 监测数据", 独立调查组", 人道救援", WHO监测报告", IAEA评估"]
         }
         keywords = ethos_dict.get(self.category, ethos_dict["enterprise"])
         对于单词 在关键词中：
