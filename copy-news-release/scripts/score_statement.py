@@ -6,7 +6,7 @@
 
 导入re
 
-classPRStatementScorer：
+类PR语句评分器：
      str, category: str = "企业"):
         """
         :param text: 待打分公关文稿全文
